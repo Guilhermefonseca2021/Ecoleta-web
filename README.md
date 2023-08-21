@@ -1,6 +1,6 @@
 # ecoleta projeto para ONG ajudarmos na coleta de residuos.
 .
-# -------------------------------------------                 Iniciando o Node                ---------------------------------------------------------
+# --------               Iniciando o Node            --------------
 .
 # 1. iniciando pastas
 -install choclate
