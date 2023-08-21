@@ -3,6 +3,7 @@
 # --------               Iniciando o Node            --------------
 .
 # 1. iniciando pastas
+
 -install choclate
 
 -npm create server (separado da nossa aplicacao
@@ -14,19 +15,20 @@
 -npm install ts-node (facilta navegacao com 'cd ...' endero da page)
 
 .
-# 2. (instalando dependencias)
+<h4> instalando dependencias do server </h4>
+
 -npx tsx --init   (typescript)
+
 -npm install ts-node-dev -D (para n ficar crtl c cancelando e ts-node direto)
+
 -npx ts-node-dev ... (resumir endereco para navegacao cd ...)
+
 -
 (no comando package.json coloquei o )
     "dev" : "ts-node-dev src/server.ts"
 -npm run dev.
 
-# aplicacao react com vite
-.
-.
-.
+
 # Waste Collection Project 🌍🗑️
 
 This is a project for a waste collection system developed for an NGO.
@@ -54,7 +56,11 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - knex nosql: database json 
 - Mapbox API: Mapping platform for displaying waste collection points on an interactive map.
 
-<a href='https://vercel.com/guilhermefonseca2021/project-ecoleta"> clique aqui para testar aplicacao </a>
+.
+
+# <a href='https://vercel.com/guilhermefonseca2021/project-ecoleta"> clique aqui para testar aplicacao </a>
+
+
 
 <img width="962" alt="ecoleta" src="https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/e98e2f8e-04c9-464e-9669-51bdcd712080">
 
