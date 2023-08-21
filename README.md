@@ -1,13 +1,18 @@
 # ecoleta projeto para ONG ajudarmos na coleta de residuos.
 .
-<h2>Iniciando o Node</h2>
+# -------------------------------------------                 Iniciando o Node                ---------------------------------------------------------
 .
-# 1.(iniciando pastas)
+# 1. iniciando pastas
 -install choclate
+
 -npm create server (separado da nossa aplicacao
+
 -npm init dentro da pasta server (criar o package json onde instalamos nossas dependencias)
+
 -npm install express (sistema de rotas do node modules
+
 -npm install ts-node (facilta navegacao com 'cd ...' endero da page)
+
 .
 # 2. (instalando dependencias)
 -npx tsx --init   (typescript)
@@ -49,3 +54,7 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - knex nosql: database json 
 - Mapbox API: Mapping platform for displaying waste collection points on an interactive map.
 
+
+<img width="962" alt="ecoleta" src="https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/e98e2f8e-04c9-464e-9669-51bdcd712080">
+
+<img width="962" alt="ecoleta22" src="https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/d16abffb-507a-4898-a48f-b2311141e267">
