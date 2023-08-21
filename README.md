@@ -46,6 +46,6 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - JavaScript: Programming language for adding interactivity and functionality to the system.
 - Node.js: JavaScript runtime environment for server-side development.
 - Express.js: Web application framework for building RESTful APIs.
-- MongoDB: NoSQL database for storing user information, waste collection points, and other relevant data.
+- knex nosql: database json 
 - Mapbox API: Mapping platform for displaying waste collection points on an interactive map.
 
