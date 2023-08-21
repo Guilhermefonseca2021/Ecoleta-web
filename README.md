@@ -54,6 +54,7 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - knex nosql: database json 
 - Mapbox API: Mapping platform for displaying waste collection points on an interactive map.
 
+<a href='https://vercel.com/guilhermefonseca2021/project-ecoleta"> clique aqui para testar aplicacao </a>
 
 <img width="962" alt="ecoleta" src="https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/e98e2f8e-04c9-464e-9669-51bdcd712080">
 
