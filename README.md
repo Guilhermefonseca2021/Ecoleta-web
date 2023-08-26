@@ -40,6 +40,8 @@ The Waste Collection Project aims to create an efficient and organized system fo
 
 ## Features 🌍🗑️
 
+![84095189-04178580-a9d5-11ea-9496-9ec6f6a282e5 (1)](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/9cb93c64-0460-4456-95b8-95acb7b6f808)
+
 - User Registration and Login: Allow users to register and log in to the system.
 - Waste Collection Points: Provide a platform for users to locate and view waste collection points near their location.
 - Waste Item Classification: Help users identify and classify different types of waste items for proper disposal.
@@ -62,7 +64,6 @@ The Waste Collection Project aims to create an efficient and organized system fo
 <a href="https://project-ecoleta-git-main-guilhermefonseca2021.vercel.app/"> clique aqui para testar aplicacao </a>
 
 
+![83580830-6f63e200-a513-11ea-9a27-0a109ec1e4d0](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/4c3e40c8-60ce-4df5-b4df-c13615b72202)
 
-<img width="962" alt="ecoleta" src="https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/e98e2f8e-04c9-464e-9669-51bdcd712080">
 
-<img width="962" alt="ecoleta22" src="https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/d16abffb-507a-4898-a48f-b2311141e267">
