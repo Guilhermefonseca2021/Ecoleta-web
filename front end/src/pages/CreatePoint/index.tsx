@@ -3,6 +3,7 @@ import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 import api from '../../services/api'
 
@@ -15,9 +16,16 @@ interface Item {
     title: string,
     image_url: string;
 }
+type IBGEUFresponse = {
+    id: number;
+    sigla: string;
+    nome: string;
+}
 
 export function CreatePoint() {
     const [items, setItems] = useState<Item[]>([])
+    const [ufs, setUfs] = useState<IBGEUFresponse[]>([])
+
 
     useEffect(() => {
     // counter
@@ -29,6 +37,17 @@ export function CreatePoint() {
                 console.log(`houve algum erro ${error}`)
             })
     }, [])
+
+    useEffect(() => {
+        axios.get('https://servicodados.ibge.gov.br/api/v1/localidades/estados/')
+            .then(response => {
+                setUfs(response.data)
+
+            })
+            .catch(error => console.log(error))
+    }, [])
+
+    const position = [51.505, -0.09]
 
     return (
         <div id="page-create-point">
@@ -86,35 +105,35 @@ export function CreatePoint() {
 
                     <div className="field-group">
                         <div className="field">
-                            <label htmlFor='uf'>Estado (UF)</label>
-                            <select name='uf' id='uf'>
-                                <option value='0'>Selecione uma UF</option>
+                            <label htmlFor='uf'>Selecione uma (UF) </label>
+                            <select name='uf' id='uf'> 
+                                <option value='0'>Qual estado? </option>
+                                {ufs.map(uf => (
+                                    <option key={uf.id} value={uf.sigla}>{uf.nome}</option>
+                                ))}
                             </select>
                         </div>
 
                         <div className="field">
                             <label htmlFor='city'>Cidade</label>
                             <select name='city' id='city'>
-                                <option value='0'>Selecione uma cidade</option>
+                                <option value="0">Selecione sua cidade</option>
                             </select>
                         </div>
                     </div>
                 </fieldset>
 
-                
-
-                <MapContainer center={[0, 0]} zoom={13} scrollWheelZoom={false} style={{height: '100$', width: '100%'}}>
+                <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
                     <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                    <Marker position={[0, 0]}>
+                    <Marker position={position}>
                     <Popup>
                         A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>
                     </Marker>
-                </MapContainer>
-                
+                </MapContainer>               
 
                 <fieldset>
                     <legend>
@@ -124,13 +143,11 @@ export function CreatePoint() {
 
                     <ul className='items-grid'>
                         {items.map(item => (
-                            <li>   
-                                <img src='https://images.unsplash.com/photo-1633412802994-5c058f151b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80' alt='' />
+                            <li key={item.id}>   
+                                <img src={item.image_url} alt={item.title} />
                                 <span>{item.title}</span>
                             </li>
-                        ))}
-                        
-                        
+                        ))}         
                     </ul>
                 </fieldset>
 
