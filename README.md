@@ -1,30 +1,18 @@
-# ecoleta projeto para ONG ajudarmos na coleta de residuos.
+## ecoleta projeto para ONG ajudarmos na coleta de residuos.
 .
-# --------               Iniciando o Node            --------------
-.
-
-<h3> 1. iniciando pastas </h3>
+##   Iniciando o Node           
 
 -install choclate
-
 -npm create server (separado da nossa aplicacao
-
 -npm init dentro da pasta server (criar o package json onde instalamos nossas dependencias)
-
 -npm install express (sistema de rotas do node modules
-
 -npm install ts-node (facilta navegacao com 'cd ...' endero da page)
 
-.
 <h4> instalando dependencias do server </h4>
 
 -npx tsx --init   (typescript)
-
 -npm install ts-node-dev -D (para n ficar crtl c cancelando e ts-node direto)
-
 -npx ts-node-dev ... (resumir endereco para navegacao cd ...)
-
--
 (no comando package.json coloquei o )
     "dev" : "ts-node-dev src/server.ts"
 -npm run dev.
