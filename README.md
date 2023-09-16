@@ -1,24 +1,8 @@
 ## ecoleta projeto para ONG ajudarmos na coleta de residuos.
-.
-##   Iniciando o Node           
 
--install choclate
--npm create server (separado da nossa aplicacao
--npm init dentro da pasta server (criar o package json onde instalamos nossas dependencias)
--npm install express (sistema de rotas do node modules
--npm install ts-node (facilta navegacao com 'cd ...' endero da page)
+![2023-09-16 00-16-21](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/dd0e7b48-0abe-47d4-bd51-434ce1cbd5b5)
 
-<h4> instalando dependencias do server </h4>
-
--npx tsx --init   (typescript)
--npm install ts-node-dev -D (para n ficar crtl c cancelando e ts-node direto)
--npx ts-node-dev ... (resumir endereco para navegacao cd ...)
-(no comando package.json coloquei o )
-    "dev" : "ts-node-dev src/server.ts"
--npm run dev.
-
-
-# Waste Collection Project 🌍🗑️
+## Waste Collection Project 🌍🗑️
 
 This is a project for a waste collection system developed for an NGO.
 
@@ -48,6 +32,8 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - Mapbox API: Mapping platform for displaying waste collection points on an interactive map.
 
 .
+
+
 
 <a href="https://project-ecoleta-git-main-guilhermefonseca2021.vercel.app/"> clique aqui para testar aplicacao </a>
 
