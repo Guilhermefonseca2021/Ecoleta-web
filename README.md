@@ -41,7 +41,3 @@ The Waste Collection Project aims to create an efficient and organized system fo
 ![83580830-6f63e200-a513-11ea-9a27-0a109ec1e4d0](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/4c3e40c8-60ce-4df5-b4df-c13615b72202)
 
 
-
-![GIFMaker_me](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/cbfdfb2f-6b32-46b6-99c5-d0be009c853e)
-
-
