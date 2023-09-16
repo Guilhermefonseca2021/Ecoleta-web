@@ -1,6 +1,6 @@
 import './style.css'
 import logo from '../../assets/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
 import { useEffect, useState, ChangeEvent } from 'react'
 import axios from 'axios'
@@ -117,8 +117,45 @@ export function CreatePoint() {
     }
 
     function handleSelecItem(id: number) {
-        setSelectedItems([id]);
+        // retorna se ja esta no array,
+        const alreadySelected = selecetedItems.findIndex(item => item === id)
+
+        if (alreadySelected >= 0) {
+            const filteredItems = selecetedItems.filter(item => item !== id)
+
+            setSelectedCity(filteredItems)
+        } else {
+            setSelectedItems([ ...selecetedItems, id]);
+        }
     }
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        const { nome, email, whatsapp } = formData;
+        const uf = ufSeleted;
+        const city = seletedCity;
+        // const [ latitude, longitude ] =  position;
+        const items = selecetedItems
+
+        const data = {
+            nome,
+            email,
+            whatsapp,
+            uf,
+            city,
+            // latitude,
+            // longitude,
+            items
+        };
+
+        await api.post('points', data)
+
+        const history = useHistory;
+
+        history.push('/')
+    }
+
 
     return (
         <div id="page-create-point">
@@ -130,7 +167,7 @@ export function CreatePoint() {
                 </Link>
             </header>
 
-            <form action=''>
+            <form action='' onSubmit={handleSubmit}>
                 <h1>cadastro do <br /> ponto de coleta</h1>
 
                 <fieldset>
@@ -219,7 +256,10 @@ export function CreatePoint() {
 
                     <ul className='items-grid'>
                         {items.map(item => (
-                            <li key={item.id} onClick={() => handleSelecItem(item.id)}>   
+                            <li 
+                                key={item.id} 
+                                onClick={() => handleSelecItem(item.id)} 
+                                className={selecetedItems.includes(item.id) ? 'selected' : ''}>   
                                 <img src={item.image_url} alt={item.title} />
                                 <span>{item.title}</span>
                             </li>

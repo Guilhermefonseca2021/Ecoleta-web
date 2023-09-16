@@ -1,5 +1,5 @@
 import { knex } from 'knex';
-// maisculo pq me reiro ao tipo q declaro na instancia tbm
+// maisculo pq me refiro ao tipo q declaro na instancia tbm
 import Knex  from 'knex';
 
 type Knex =  any;
