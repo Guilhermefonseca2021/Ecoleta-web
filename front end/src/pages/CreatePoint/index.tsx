@@ -11,7 +11,6 @@ import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'
 import { Marker, Popup, useMapEvents } from 'react-leaflet'
 
-import { LocationEvent } from 'leaflet'
 
 interface Item {
     id: number,
@@ -150,10 +149,6 @@ export function CreatePoint() {
         };
 
         await api.post('points', data)
-
-        const history = useHistory;
-
-        history.push('/')
     }
 
 
@@ -216,7 +211,7 @@ export function CreatePoint() {
 
                     <div className="field-group">
                         <div className="field">
-                            <label htmlFor='uf'>Selecione uma (UF) </label>
+                            <label htmlFor='uf'>Selecione (UF) </label>
                             <select name='uf' id='uf' value={ufSeleted} onChange={handleSelectedUf}> 
                                 <option value='0'>Qual estado? </option>
                                 {ufs.map(uf => (
@@ -230,7 +225,7 @@ export function CreatePoint() {
                             <select name='city' value={seletedCity} onChange={handleSelectCity} id='city'>
                                 <option value="0">Selecione sua cidade</option>
                                 {cities.map(city => (
-                                    <option key={city} value={city}>{city}</option>
+                                    <option key={city.nome} value={city.nome}>{city}</option>
                                 ))}
                             </select>
                         </div>
