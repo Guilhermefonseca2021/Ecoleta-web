@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## ecoleta projeto para ONG ajudarmos na coleta de residuos.
 
 ![2023-09-16 00-16-21](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/dd0e7b48-0abe-47d4-bd51-434ce1cbd5b5)
@@ -41,3 +42,9 @@ The Waste Collection Project aims to create an efficient and organized system fo
 ![83580830-6f63e200-a513-11ea-9a27-0a109ec1e4d0](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/4c3e40c8-60ce-4df5-b4df-c13615b72202)
 
 
+=======
+<h3> iniciando Node e banco de dados </h3>
+
+-npm install knex
+-npm install sqlite
+>>>>>>> 9a57b22 (relacao de tabelas com banco de dados)
