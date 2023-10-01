@@ -74,7 +74,7 @@ export function CreatePoint() {
             return;
         } 
 
-        axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufSeleted}/municipios`)
+        axios.get<IBGECityResponse[]>(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufSeleted}/municipios`)
             .then(response => {
                 const cityName = response.data.map(city => city.nome)
                 
@@ -83,7 +83,7 @@ export function CreatePoint() {
     }, [ufSeleted])
 
     function handleSelectCity(event: ChangeEvent<HTMLSelectElement>) {
-        const city = event.data.value;
+        const city = event.data;
 
         setSelectedCity(city)
     }
@@ -176,6 +176,7 @@ export function CreatePoint() {
                             name='name'
                             id='name'
                             onChange={handleInputChange}
+                            required
                         />
                     </div>
 
@@ -187,6 +188,7 @@ export function CreatePoint() {
                                 name='email'
                                 id='email'
                                 onChange={handleInputChange}
+                                required
                             />
                         </div>
 
@@ -198,6 +200,7 @@ export function CreatePoint() {
                                 name='whatsapp'
                                 id='whatsapp'
                                 onChange={handleInputChange}
+                                required
                             />
                         </div>
                     </div>
