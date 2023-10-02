@@ -10,4 +10,4 @@
 2. routes (todas nossas rotas e endpoints)
 3. database (connection file para padronizar nosso caminhos, e conexao com sqlite)
 4. seeds (enves de usuario cadastrar informacoes, nossas seeds sao os dados cadastrados no servidor para o usuario escolher na aplicacao, sao dados padraoes)
-5. knexfile (declaro pastas da seed, connectio com database e migrations.)
+5. knexfile (declaro pastas da seed, connectio com database e migrations.) 
