@@ -8,7 +8,6 @@ The Waste Collection Project aims to create an efficient and organized system fo
 
 ## Features 🌍🗑️
 
-![84095189-04178580-a9d5-11ea-9496-9ec6f6a282e5 (1)](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/9cb93c64-0460-4456-95b8-95acb7b6f808)
 
 - User Registration and Login: Allow users to register and log in to the system.
 - Waste Collection Points: Provide a platform for users to locate and view waste collection points near their location.
@@ -27,11 +26,10 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - knex nosql: database json 
 - Mapbox API: Mapping platform for displaying waste collection points on an interactive map.
 
-
 <a href="https://project-ecoleta-git-main-guilhermefonseca2021.vercel.app/"> clique aqui para testar aplicacao </a>
+![84095189-04178580-a9d5-11ea-9496-9ec6f6a282e5 (1)](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/9cb93c64-0460-4456-95b8-95acb7b6f808)
 
 
-![83580830-6f63e200-a513-11ea-9a27-0a109ec1e4d0](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/4c3e40c8-60ce-4df5-b4df-c13615b72202)
 
 
 <h3> iniciando Node e banco de dados </h3>
