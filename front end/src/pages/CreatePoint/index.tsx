@@ -2,27 +2,15 @@ import { NavLink } from "react-router-dom";
 import logoImg from '../../assets/logo.svg'
 import { Container, Content, FormContainer, FormField, FormSpace, Header, Navbar } from "./styles";
 import { FaArrowLeft } from "react-icons/fa6";
-import axios from "axios";
-import { useEffect } from "react";
-import { useFetchPoint } from '../../hooks/fetchPoints'
+import { useFetchLocalStates } from '../../hooks/useFetchLocal'
 
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import { Popup } from "react-leaflet/Popup";
 
-interface PointProps  {
-  id: number;
-  name: string;
-}
-
 export default function CreatePoint() {
-  const { data } = useFetchPoint<PointProps[]>('https:./') 
+  const { ufs, cities, handleSelectedUf, handleSelectedCity, selectedCity, selectedUf } = useFetchLocalStates() 
   
   const position = [51.505, -0.09]
-
-  useEffect(() => {
-    axios.get(`https://servicodados.ibge.gov.br/api/v1/localidades/distritos/rj`)
-      .then(response => console.log(response.data))
-  }, [])
   
   function handleSubmit(event: any){
     event.preventDefault();
@@ -48,33 +36,45 @@ export default function CreatePoint() {
             <h1> Cadastro do ponto de coleta</h1>
 
             <h2>Dados da identidade </h2>
-            <label>Nome da entidade</label>
-            <input type="text"  />
+            <label htmlFor="name">Nome da entidade</label>
+            <input type="text" name="name" />
 
             
             <FormSpace>
             
               <div className="adress">
-                <label >Endereco</label>
-                <input type="text"  />
+                <label htmlFor="address">Endereco</label>
+                <input type="text" name="address"  />
               </div>
               <div className="number">
-                <label >Numero</label>
-                <input type="text"  />
+                <label htmlFor="">Numero</label>
+                <input type="text" name="addres" />
               </div>
             </FormSpace>
 
             <FormField>
               <div >
-                <label>Estado</label>
-                <select name="Contry" id="">
-                  <option value='estado.id'>Estado</option>
+                <label htmlFor="uf">Estado:</label>
+                <select name="uf" id="uf" value={selectedUf} onChange={handleSelectedUf}>
+                  
+                  <option value='0'>Selecione a UF</option>
+                  {ufs.map(uf => {
+                    return (
+                      <option key={uf.id} value={uf.sigla}>{uf.sigla}</option>     
+                    )
+                  })}
                 </select>
               </div>
               <div >
-                <label>Cidade</label>
-                <select name="Contry" id="">
-                  <option value='estado.id'>Cidade</option>
+                <label htmlFor="city">Cidade</label>
+                <select name="city" id="city" value={selectedCity} onChange={handleSelectedCity}>
+
+                  <option value='0' >Selecione a Cidade</option>
+                  {cities.map(city => {
+                    return (
+                      <option key={city.id} value={city.nome}>{city.nome}</option>     
+                    )
+                  })}
                 </select>
               </div>
             </FormField>
@@ -94,15 +94,8 @@ export default function CreatePoint() {
             <h2>Items de coleta</h2>
 
             <ul>
-              { 
-                data?.map(item => {
-                  return(
-                    <li key={item.id}>{item.name}</li>
-                  )
-                })
-              }
+              {/* selecionar items do back end */}
             </ul>
-            <p></p>
 
             <button type="submit" onClick={handleSubmit}>
               Enviar ponto de coleta
