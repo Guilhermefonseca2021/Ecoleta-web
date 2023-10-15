@@ -7,14 +7,32 @@ import { useFetchLocalStates } from '../../hooks/useFetchLocal'
 import { MapContainer, TileLayer, Marker } from 'react-leaflet'
 import { Popup } from "react-leaflet/Popup";
 
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import * as zod from 'zod';
+
+const FormData = zod.object({
+  name: zod.string().min(1, { message: 'Ensira o nome por favor' }),
+  address: zod.number(),
+  number: zod.string(),
+  state: zod.string(),
+  city: zod.string()
+});
+
+type createFormData = zod.infer<typeof FormSchema>
+
 export default function CreatePoint() {
   const { ufs, cities, handleSelectedUf, handleSelectedCity, selectedCity, selectedUf } = useFetchLocalStates() 
   
+  const { register, handleSubmit } = useForm<createFormData>({
+    resolver: zodResolver(FormData),
+  });
+
   const position = [51.505, -0.09]
   
-  function handleSubmit(event: any){
-    event.preventDefault();
-    console.log('enviou')
+  function createPoint(data: any) {
+    console.log(data)
+    
   }
   
   return (
@@ -31,24 +49,24 @@ export default function CreatePoint() {
           </NavLink>
         </Header>
 
-        <Content>
+        <Content onSubmit={handleSubmit(createPoint)}>
           <FormContainer>
             <h1> Cadastro do ponto de coleta</h1>
 
             <h2>Dados da identidade </h2>
             <label htmlFor="name">Nome da entidade</label>
-            <input type="text" name="name" />
+            <input type="text"  {...register('name')} />
 
             
             <FormSpace>
             
               <div className="adress">
                 <label htmlFor="address">Endereco</label>
-                <input type="text" name="address"  />
+                <input type="text"  {...register('adress')} />
               </div>
               <div className="number">
                 <label htmlFor="">Numero</label>
-                <input type="text" name="addres" />
+                <input type="text"  {...register('number')} />
               </div>
             </FormSpace>
 
@@ -97,7 +115,7 @@ export default function CreatePoint() {
               {/* selecionar items do back end */}
             </ul>
 
-            <button type="submit" onClick={handleSubmit}>
+            <button type="submit">
               Enviar ponto de coleta
             </button>
           </FormContainer>
