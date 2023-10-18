@@ -20,8 +20,7 @@
 
 The Waste Collection Project aims to create an efficient and organized system for waste management and recycling. The project focuses on enabling the NGO to collect, sort, and recycle waste materials effectively, while also raising awareness about the importance of waste management and environmental sustainability.
 
-![2023-09-16 00-16-21](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/dd0e7b48-0abe-47d4-bd51-434ce1cbd5b5)
-
+![84095189-04178580-a9d5-11ea-9496-9ec6f6a282e5 (1)](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/9cb93c64-0460-4456-95b8-95acb7b6f808)
 
 ## 🛠️ Features 
 - [Typescript](https://www.typescriptlang.org/)
@@ -30,8 +29,6 @@ The Waste Collection Project aims to create an efficient and organized system fo
 - [Node.js](https://nodejs.org/en/)
 - [Prisma](https://www.prisma.io/)
 - [React-leaflet](https://react-leaflet.js.org/)
-
-<img width="1567" alt="-kafene-presents" src="https://github.com/Guilhermefonseca2021/kafene/assets/92196697/bbf6639e-e766-49c9-b3b6-846b40a007e0">
 
 ## Necessary before test aplicacion
 
@@ -57,4 +54,6 @@ $  npm run dev
 <a href="https://project-ecoleta-git-main-guilhermefonseca2021.vercel.app/"> clique aqui para testar aplicacao </a>
 
 
-![84095189-04178580-a9d5-11ea-9496-9ec6f6a282e5 (1)](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/9cb93c64-0460-4456-95b8-95acb7b6f808)
+![2023-09-16 00-16-21](https://github.com/Guilhermefonseca2021/Project-Ecoleta/assets/92196697/dd0e7b48-0abe-47d4-bd51-434ce1cbd5b5)
+
+
